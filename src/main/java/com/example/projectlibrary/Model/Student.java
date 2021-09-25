@@ -1,6 +1,7 @@
 package com.example.projectlibrary.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -18,7 +19,7 @@ public class Student {
 
 
     @OneToOne(mappedBy = "studentColection")
-    @JsonIgnoreProperties("studentColection")
+    @JsonManagedReference
     private Cart cart;
 
     @OneToMany(mappedBy = "borrowbConlection")

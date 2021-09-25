@@ -17,20 +17,23 @@ public class Cart {
     private int quantity;
     private String bookName;
 
-    @OneToMany(mappedBy = "booksConlection",cascade = CascadeType.ALL)
-    @JsonManagedReference("booksConlection")
-    private Set<Book> cartConlection;
+    @OneToOne
+    @JoinColumn(name = "bookId",referencedColumnName = "bookId")
+    @JsonManagedReference
+    private Book bookConlection;
+
+
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "studentID",referencedColumnName = "studentId")
-    @JsonIgnoreProperties("studentColection")
+    @JoinColumn(name = "studentId",referencedColumnName = "studentId")
+    @JsonManagedReference
     private Student studentColection;
 
-    public Cart(Long cartId, int quantity, String bookName, Set<Book> cartConlection, Student studentColection) {
+    public Cart(Long cartId, int quantity, String bookName, Book bookConlection, Student studentColection) {
         this.cartId = cartId;
         this.quantity = quantity;
         this.bookName = bookName;
-        this.cartConlection = cartConlection;
+        this.bookConlection = bookConlection;
         this.studentColection = studentColection;
     }
 
@@ -61,19 +64,18 @@ public class Cart {
         this.bookName = bookName;
     }
 
-    public Set<Book> getCartConlection() {
-        return cartConlection;
-    }
-
-    public void setCartConlection(Set<Book> cartConlection) {
-        this.cartConlection = cartConlection;
-    }
-
     public Student getStudentColection() {
         return studentColection;
     }
 
     public void setStudentColection(Student studentColection) {
         this.studentColection = studentColection;
+    }
+    public Book getBookConlection() {
+        return bookConlection;
+    }
+
+    public void setBookConlection(Book bookConlection) {
+        this.bookConlection = bookConlection;
     }
 }

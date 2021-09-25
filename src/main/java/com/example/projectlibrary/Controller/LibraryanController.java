@@ -48,8 +48,6 @@ public class LibraryanController extends BasicController{
         }
             libraryanService.save(libraryan);
             return new ResponseEntity<>(HttpStatus.OK);
-
-
     }
 
 }

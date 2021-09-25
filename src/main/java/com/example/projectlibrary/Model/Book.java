@@ -1,6 +1,7 @@
 package com.example.projectlibrary.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -19,16 +20,19 @@ public class Book {
     private Date date;
     private int numberPages;
     private Float borrowTime;
+    private String imageBook;
 
     @ManyToOne
     @JoinColumn(name = "categoryId")
     @JsonIgnoreProperties("categoryConlection")
     private Category bookConlection;
 
-    @ManyToOne
-    @JoinColumn(name = "cartId")
-    @JsonIgnoreProperties("cartConlection")
-    private Cart booksConlection;
+
+    @OneToOne(mappedBy = "bookConlection")
+    @JsonIgnoreProperties("bookConlection")
+    private Cart cart;
+
+//    private Cart booksConlection;
 
     public Borow getBorow() {
         return borow;
@@ -42,18 +46,9 @@ public class Book {
     @JsonIgnoreProperties("borrowColection")
     private Borow borow;
 
-    public Cart getBooksConlection() {
-        return booksConlection;
-    }
+    public Book() {}
 
-    public void setBooksConlection(Cart booksConlection) {
-        this.booksConlection = booksConlection;
-    }
-
-    public Book() {
-    }
-
-    public Book(Long bookId, String bookName, int total, int quantity, String status, String authorName, Date date, int numberPages, Float borrowTime, Category bookConlection) {
+    public Book(Long bookId, String bookName, int total, int quantity, String status, String authorName, Date date, int numberPages, Float borrowTime) {
         this.bookId = bookId;
         this.bookName = bookName;
         this.total = total;
@@ -63,7 +58,6 @@ public class Book {
         this.date = date;
         this.numberPages = numberPages;
         this.borrowTime = borrowTime;
-        this.bookConlection = bookConlection;
     }
 
     public Long getBookId() {
@@ -138,11 +132,34 @@ public class Book {
         this.borrowTime = borrowTime;
     }
 
-    public Category getBookConlection() {
-        return bookConlection;
+    public Book(Long bookId, String bookName, int total, int quantity, String status, String authorName, Date date, int numberPages, Float borrowTime, String imageBook, Borow borow, Cart cart) {
+        this.bookId = bookId;
+        this.bookName = bookName;
+        this.total = total;
+        this.quantity = quantity;
+        this.status = status;
+        this.authorName = authorName;
+        this.date = date;
+        this.numberPages = numberPages;
+        this.borrowTime = borrowTime;
+        this.imageBook = imageBook;
+        this.borow = borow;
+        this.cart=cart;
     }
 
-    public void setBookConlection(Category bookConlection) {
-        this.bookConlection = bookConlection;
+    public String getImageBook() {
+        return imageBook;
     }
+
+    public void setImageBook(String imageBook) {
+        this.imageBook = imageBook;
+    }
+
+//    public Category getBookConlection() {
+//        return bookConlection;
+//    }
+//
+//    public void setBookConlection(Category bookConlection) {
+//        this.bookConlection = bookConlection;
+//    }
 }

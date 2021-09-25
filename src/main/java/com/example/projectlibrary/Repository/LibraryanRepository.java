@@ -10,3 +10,6 @@ public interface LibraryanRepository extends JpaRepository<Libraryan,Long> {
     @Query(value = "SELECT * FROM libraryan WHERE libraryan_name LIKE %?1% OR gmail LIKE %?1% OR libraryan_id LIKE %?1%",nativeQuery = true)
     List<Libraryan> findByLibraryanName(String libraryanName);
 }
+
+
+

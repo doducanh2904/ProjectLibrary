@@ -1,9 +1,11 @@
 package com.example.projectlibrary.Model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.util.Set;
 
 @Entity
@@ -11,7 +13,9 @@ import java.util.Set;
 public class Category {
     @Id
     @GeneratedValue()
+
     private Long categoryId;
+    @NotEmpty(message = "Name not null")
     private String categoryName;
     private int total;
 
@@ -21,14 +25,6 @@ public class Category {
         this.categoryId = categoryId;
         this.categoryName = categoryName;
         this.total = total;
-    }
-
-    public Set<Book> getCategoryConlection() {
-        return categoryConlection;
-    }
-
-    public void setCategoryConlection(Set<Book> categoryConlection) {
-        this.categoryConlection = categoryConlection;
     }
 
     public Long getCategoryId() {
@@ -55,6 +51,6 @@ public class Category {
         this.total = total;
     }
     @OneToMany(mappedBy = "bookConlection",cascade = CascadeType.ALL)
-    @JsonManagedReference("bookConlection")
+    @JsonIgnoreProperties("bookConlection")
     private Set<Book> categoryConlection;
 }

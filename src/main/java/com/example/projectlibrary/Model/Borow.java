@@ -10,7 +10,7 @@ import java.util.Date;
 public class Borow {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long borrowID;
+    private Long borrowId;
 //    private Long bookId;
 //    private Long studentId;
 //    private Long libraryanID;
@@ -18,6 +18,21 @@ public class Borow {
     private int quantity;
     private Date borrowedDate;
     private Date payDate;
+    private int borrowRole;
+
+
+
+    public Borow(Long borrowId, String bookName, int quantity, Date borrowedDate, Date payDate, int borrowRole, Book borrowColection, Student borrowbConlection, Libraryan borrowlConlection) {
+        this.borrowId = borrowId;
+        this.bookName = bookName;
+        this.quantity = quantity;
+        this.borrowedDate = borrowedDate;
+        this.payDate = payDate;
+        this.borrowRole = borrowRole;
+        this.borrowColection = borrowColection;
+        this.borrowbConlection = borrowbConlection;
+        this.borrowlConlection = borrowlConlection;
+    }
 
     @OneToOne
     @JoinColumn(name = "bookId",referencedColumnName = "bookId")
@@ -30,16 +45,16 @@ public class Borow {
     private Student borrowbConlection;
 
     @ManyToOne
-    @JoinColumn(name = "libraryanID")
+    @JoinColumn(name = "libraryanId")
     @JsonIgnoreProperties("libraryanColection")
     private Libraryan borrowlConlection;
 
-    public Long getBorrowID() {
-        return borrowID;
+    public Long getBorrowId() {
+        return borrowId;
     }
 
-    public void setBorrowID(Long borrowID) {
-        this.borrowID = borrowID;
+    public void setBorrowId(Long borrowId) {
+        this.borrowId = borrowId;
     }
 
     public String getBookName() {
@@ -73,6 +88,13 @@ public class Borow {
     public void setPayDate(Date payDate) {
         this.payDate = payDate;
     }
+    public int getBorrowRole() {
+        return borrowRole;
+    }
+
+    public void setBorrowRole(int borrowRole) {
+        this.borrowRole = borrowRole;
+    }
 
     public Book getBorrowColection() {
         return borrowColection;
@@ -98,8 +120,8 @@ public class Borow {
         this.borrowlConlection = borrowlConlection;
     }
 
-    public Borow(Long borrowID, String bookName, int quantity, Date borrowedDate, Date payDate, Book borrowColection, Student borrowbConlection, Libraryan borrowlConlection) {
-        this.borrowID = borrowID;
+    public Borow(Long borrowId, String bookName, int quantity, Date borrowedDate, Date payDate, Book borrowColection, Student borrowbConlection, Libraryan borrowlConlection) {
+        this.borrowId = borrowId;
         this.bookName = bookName;
         this.quantity = quantity;
         this.borrowedDate = borrowedDate;
