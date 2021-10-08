@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+    <title>
+User
+    </title>
+    <link rel="stylesheet" href="assets/css/user.css"/>
+    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+</head>
+<body>
+   <div class="wrapper">
+       <div class="header">
+           <div class="header-menu">
+               <div class="title">Due <span>library</span></div>
+               <div class="sidebar-btn">
+                <i id="navbtn" class="fas fa-bars"></i>
+               </div>
+               <ul>
+                   <li> <a href="#"><i id="navbtn" class="fas fa-search"></i></a> </li>
+                   <li> <a href="#"><i id="navbtn" class="fas fa-bell"></i></a> </li>
+                   <li> <a href="index.html"><i id="navbtn" class="fas fa-power-off"></i></a> </li>
+               </ul>
+
+               
+           </div>
+       </div>
+       <div class="sidebar">
+           <div class="sidebar-menu">   
+            <center class="profile">
+                <img src="assets/images/t.jpg" alt="">
+                <p>Admin</p>
+            </center>
+            <li class="item">
+                <a href="admin1.html" class="menu-btn">
+                    <i class="fas fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="drop_fix_book.html" class="menu-btn">
+                    <i class="fas fa-user-circle"></i><span>Quản Lý Sách </span>
+                </a>
+               
+            </li>
+            <li class="item">
+                <a href="user.html" class="menu-btn">
+                    <i class="fas fa-users-cog"></i><span>Quản Lý Độc Giả</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="list.html" class="menu-btn">
+                    <i class="fas fa-clipboard-list"></i><span>Danh Sách Chờ Mượn</span>
+                </a>
+            </li>
+
+            <li class="item">
+                <a href="#" class="menu-btn">
+                    <i class="fas fa-sliders-h"></i><span>Cài Đặt</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#" class="menu-btn">
+                    <i class="fas fa-power-off"></i><span>Thoát</span>
+                </a>
+            </li>
+           </div>
+       </div>
+       <div class="table-container">
+        <h1 class="heading">Quản Lý Danh Sách Chờ Mượn</h1>
+        <table class="table">
+         <thead>           
+            <tr>
+                <th>Mã Sinh Viên</th>
+                <th>Họ Tên</th>
+                <th>Tên Sách</th>
+                <th>Số Lượng</th>
+                <th>Ngày Mượn</th>
+                <th>Thủ Thư</th>
+                
+            </tr>
+         </thead>
+         <tbody>
+             <tr>
+                 <td data-label="Mã Sinh Viên">181121521232</td>
+                 <td data-label="Họ Tên">Nguyễn Hữu Hiếu Thiên</td>
+                 <td data-label="Sách">Anh Em Quảng Trị</td>
+                 <td data-label="Số lượng">1</td>
+                 <td data-label="Ngày mượn">23/09/2021</td>
+                 <td data-label="#">
+                     <a href="#" class="btn">Chấp Nhận </a>
+                    <a href="#" class="btn1">Xóa</a>
+                </td>
+                 
+             </tr>
+             <tr>
+                <td data-label="Mã Sinh Viên">181121521201</td>
+                <td data-label="Họ Tên">Đỗ Đức ANh</td>
+                <td data-label="Sách">Anh Em Gia Lai</td>
+                <td data-label="Số lượng">1</td>
+                <td data-label="Ngày mượn">23/09/2021</td>
+                <td data-label="#">
+                    <a href="#" class="btn">Chấp Nhận </a>
+                   <a href="#" class="btn1">Xóa</a>
+               </td>
+                
+            </tr>
+            <tr>
+                <td data-label="Mã Sinh Viên">181121521238</td>
+                <td data-label="Họ Tên">Thái Thị Thanh Trúc</td>
+                <td data-label="Sách">Anh Em Đà Nẵng</td>
+                <td data-label="Số lượng">1</td>
+                <td data-label="Ngày mượn">23/09/2021</td>
+                <td data-label="#">
+                    <a href="#" class="btn">Chấp Nhận </a>
+                   <a href="#" class="btn1">Xóa</a>
+               </td>
+                
+            </tr>
+            <tr>
+                <td data-label="Mã Sinh Viên">181121521239</td>
+                <td data-label="Họ Tên">Đỗ Thị Thu Trang</td>
+                <td data-label="Sách">Anh Em Đà Nẵng</td>
+                <td data-label="Số lượng">1</td>
+                <td data-label="Ngày mượn">23/09/2021</td>
+                <td data-label="#">
+                    <a href="#" class="btn">Chấp Nhận </a>
+                   <a href="#" class="btn1">Xóa</a>
+               </td>
+                
+            </tr>
+            <tr>
+                <td data-label="Mã Sinh Viên">181121521208</td>
+                <td data-label="Họ Tên">Nguyễn Đức Duy</td>
+                <td data-label="Sách">Anh Em Hà Tĩnh</td>
+                <td data-label="Số lượng">1</td>
+                <td data-label="Ngày mượn">23/09/2021</td>
+                <td data-label="#">
+                    <a href="#" class="btn">Chấp Nhận </a>
+                   <a href="#" class="btn1">Xóa</a>
+               </td>
+                
+            </tr>
+            <tr>
+                <td data-label="Mã Sinh Viên">181121521240</td>
+                <td data-label="Họ Tên">Nguyễn Thị Như Ý</td>
+                <td data-label="Sách">Anh Em Quảng Ngãi</td>
+                <td data-label="Số lượng">1</td>
+                <td data-label="Ngày mượn">23/09/2021</td>
+                <td data-label="#">
+                    <a href="#" class="btn">Chấp Nhận </a>
+                   <a href="#" class="btn1">Xóa</a>
+               </td>
+                
+            </tr>
+         </tbody>
+        </table>
+       </div>
+       
+       
+       
+   </div>
+   <script type="text/javascript">
+    $(document).ready(function(){
+        $(".sidebar-btn").click(function(){
+            $(".wrapper").toggleClass("collapse");
+        });
+    });
+</script>
+</body>
+</html>

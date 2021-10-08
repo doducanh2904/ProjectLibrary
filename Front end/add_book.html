@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+    <title>
+User
+    </title>
+    <link rel="stylesheet" href="assets/css/user.css"/>
+    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+    
+</head>
+<body>
+   <div class="wrapper">
+       <div class="header">
+           <div class="header-menu">
+               <div class="title">Due <span>library</span></div>
+               <div class="sidebar-btn">
+                <i id="navbtn" class="fas fa-bars"></i>
+               </div>
+               <ul>
+                   <li> <a href="#"><i id="navbtn" class="fas fa-search"></i></a> </li>
+                   <li> <a href="#"><i id="navbtn" class="fas fa-bell"></i></a> </li>
+                   <li> <a href="index.html"><i id="navbtn" class="fas fa-power-off"></i></a> </li>
+               </ul>
+
+               
+           </div>
+       </div>
+       <div class="sidebar">
+           <div class="sidebar-menu">   
+            <center class="profile">
+                <img src="assets/images/t.jpg" alt="">
+                <p>Admin</p>
+            </center>
+            <li class="item">
+                <a href="admin1.html" class="menu-btn">
+                    <i class="fas fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="drop_fix_book.html" class="menu-btn">
+                    <i class="fas fa-user-circle"></i><span>Quản Lý Sách </span>
+                </a>
+                
+            </li>
+            <li class="item">
+                <a href="#" class="menu-btn">
+                    <i class="fas fa-users-cog"></i><span>Quản Lý Độc Giả</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="list.html" class="menu-btn">
+                    <i class="fas fa-clipboard-list"></i><span>Danh Sách Chờ Mượn</span>
+                </a>
+            </li>
+
+            <li class="item">
+                <a href="#" class="menu-btn">
+                    <i class="fas fa-sliders-h"></i><span>Cài Đặt</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#" class="menu-btn">
+                    <i class="fas fa-power-off"></i><span>Thoát</span>
+                </a>
+            </li>
+           </div>
+       </div>
+       <div class="a"style="height: 414px;width: 600px;margin-left: 500px;margin-top: 100px">
+        <div><p style="float: center;background-color: #ff5722d9;text-align: center">Thêm Sách</p></div>
+          <form action="" id="books-info" method="post" enctype="multipart/form-data">
+             <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                   <span class="input-group-text" id="basic-addon1">Tên sách</span>
+                </div>
+                <input name="tensach" id="tensach" type="text" class="form-control" placeholder="" aria-label="nhập tên sách" aria-describedby="basic-addon1">
+             </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                   <span class="input-group-text" id="basic-addon1">ID Danh mục</span>
+                </div>
+                <select name="iddanhmuc" id="iddanhmuc" class="form-control" > 
+                  <option value="DM001">Sách(DM001)</option>
+                  <option value="DM002">Giáo trình(DM002)</option>
+                  <option value="DM003">Tạp chí(DM003)</option>
+                  <option value="DM004">Truyện, kịch(DM004)</option>
+                </select>
+                
+             </div>
+
+
+             <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                   <span class="input-group-text" id="basic-addon1">Số trang sách </span>
+                </div>
+                <input name="sotrang" id="sotrang" type="number"min='1' class="form-control" placeholder=" " aria-label="username" aria-describedby="basic-addon1">
+             </div>
+             <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                   <span class="input-group-text" id="basic-addon1">Tên tác giả </span>
+                </div>
+                <input name="tentacgia" id="tentacgia" type="text" class="form-control" placeholder="" aria-label="username" aria-describedby="basic-addon1">
+             </div>
+             <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                   <span class="input-group-text" id="basic-addon1">Thời gian được mượn</span>
+                </div>
+                <input name="thoigianduocmuon" id="thoigianduocmuon" type="number"min='1' class="form-control" placeholder=" " aria-label="username" aria-describedby="basic-addon1">
+             </div>
+             <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                   <span class="input-group-text" id="basic-addon1">Thời gian xuất bản</span>
+                </div>
+                <input name="thoigianxuatban" id="thoigianxuatban" type="date" class="form-control" placeholder=" " aria-label="username" aria-describedby="basic-addon1">
+             </div>
+             <div class="custom-file" >
+              <input  name="anh" id="anh" type="file" multiple="multiple" style="opacity: 1;height: 100%; padding: 0.3rem;font-size: 15px;margin: auto; vertical-align: middle;" class="custom-file-input"  id="profile_image">
+                <label class="custom-file-label" for="customFile"style="font-size: 15px"></label>
+             </div>
+             <input type="submit"  class="btn btn-primary btn-sm" value="Save" />
+          </form>
+       </div>
+       
+       
+       
+   </div>
+   <script type="text/javascript">
+    $(document).ready(function(){
+        $(".sidebar-btn").click(function(){
+            $(".wrapper").toggleClass("collapse");
+        });
+    });
+</script>
+</body>
+</html>

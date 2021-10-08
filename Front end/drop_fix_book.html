@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+    <title>
+User
+    </title>
+    <link rel="stylesheet" href="assets/css/user.css"/>
+    <link rel="stylesheet" href="assets/css/templatemo-sixteen.css">
+    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+</head>
+<body>
+   <div class="wrapper">
+       <div class="header">
+           <div class="header-menu">
+               <div class="title">Due <span>library</span></div>
+               <div class="sidebar-btn">
+                <i id="navbtn" class="fas fa-bars"></i>
+               </div>
+               <ul>
+                   <li> <a href="#"><i id="navbtn" class="fas fa-search"></i></a> </li>
+                   <li> <a href="#"><i id="navbtn" class="fas fa-bell"></i></a> </li>
+                   <li> <a href="index.html"><i id="navbtn" class="fas fa-power-off"></i></a> </li>
+               </ul>
+
+               
+           </div>
+       </div>
+       <div class="sidebar">
+           <div class="sidebar-menu">   
+            <center class="profile">
+                <img src="assets/images/t.jpg" alt="">
+                <p>Admin</p>
+            </center>
+            <li class="item">
+                <a href="admin1.html" class="menu-btn">
+                    <i class="fas fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            <li class="item" >
+                <a href="drop_fix_book.html" class="menu-btn">
+                    <i class="fas fa-user-circle"></i><span>Quản Lý Sách</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="user.html" class="menu-btn">
+                    <i class="fas fa-users-cog"></i><span>Quản Lý Độc Giả</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="list.html" class="menu-btn">
+                    <i class="fas fa-clipboard-list"></i><span>Danh Sách Chờ Mượn</span>
+                </a>
+            </li>
+
+            <li class="item">
+                <a href="#" class="menu-btn">
+                    <i class="fas fa-sliders-h"></i><span>Cài Đặt</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="#" class="menu-btn">
+                    <i class="fas fa-power-off"></i><span>Thoát</span>
+                </a>
+            </li>
+           </div>
+       </div>
+       <div class="table-container">
+        <h1 class="heading">Quản Lý Sách</h1>
+        <div class="button1">
+            <a href="add_book.html">
+              <button  class="button">Thêm</button>
+            </a>
+          </div>
+        <table class="table">
+         <thead>           
+            <tr>
+                <th>Hình Ảnh</th>
+                <th>Tên Sách</th>
+                <th>Tác Giả</th>
+                <th>Danh Mục Sách</th>
+                <th>Ngày Xuất Bản</th>
+                <th>Số Trang</th>
+                <th>Thủ Thư</th>               
+            </tr>
+         </thead>
+         <tbody>
+             <tr>
+                 <td data-label="Hình Ảnh"><img src="assets/images/02.jpg" alt=""></td>
+                 <td data-label="Tên Sách">Nguyễn Hữu Hiếu Thiên</td>
+                 <td data-label="Tác Giả">Anh Em Quảng Trị</td>
+                 <td data-label="Danh Mục Sách">Truyện</td>
+                 <td data-label="Ngày Xuất Bản">1</td>
+                 <td data-label="Số Trang">300</td>
+                 <td data-label="Thủ Thư">
+                     <a href="#" class="btn">Sửa </a>
+                    <a href="#" class="btn1">Xóa</a>
+                </td>
+                 
+             </tr>
+             <tr>
+                <td data-label="Hình Ảnh"><img src="assets/images/02.jpg" alt=""></td>
+                <td data-label="Tên Sách">Nguyễn Hữu Hiếu Thiên</td>
+                <td data-label="Tác Giả">Anh Em Quảng Trị</td>
+                <td data-label="Danh Mục Sách">Truyện</td>
+                <td data-label="Ngày Xuất Bản">1</td>
+                <td data-label="Số Trang">300</td>
+                <td data-label="Thủ Thư">
+                    <a href="#" class="btn">Sửa </a>
+                   <a href="#" class="btn1">Xóa</a>
+               </td>
+                
+            </tr>
+            <tr>
+                <td data-label="Hình Ảnh"><img src="assets/images/02.jpg" alt=""></td>
+                <td data-label="Tên Sách">Nguyễn Hữu Hiếu Thiên</td>
+                <td data-label="Tác Giả">Anh Em Quảng Trị</td>
+                <td data-label="Danh Mục Sách">Truyện</td>
+                <td data-label="Ngày Xuất Bản">1</td>
+                <td data-label="Số Trang">300</td>
+                <td data-label="Thủ Thư">
+                    <a href="#" class="btn">Sửa </a>
+                   <a href="#" class="btn1">Xóa</a>
+               </td>
+                
+            </tr>
+         </tbody>
+        </table>
+       </div>
+       
+       
+       
+   </div>
+   <script type="text/javascript">
+    $(document).ready(function(){
+        $(".sidebar-btn").click(function(){
+            $(".wrapper").toggleClass("collapse");
+        });
+    });
+</script>
+</body>
+</html>
